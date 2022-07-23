@@ -78,14 +78,14 @@
                 navigation_layer {
                         bindings = <
    &none &kp C_MUTE  &kp AT       &kp HASH     &kp DLLR     &kp C_VOL_UP     &kp C_BRI_UP     &kp PG_UP     &kp UP      &kp PG_DN      &none      &none
-   &none &kp LCTRL   &kp LALT     &kp LSHFT    &kp LCMD     &kp C_VOL_DN     &kp C_BRI_DN     &kp LEFT      &kp DOWN    &kp RIGHT      &kp TAB    &none
+   &none &sk LCTRL   &sk LALT     &sk LSHFT    &sk LCMD     &kp C_VOL_DN     &kp C_BRI_DN     &kp LEFT      &kp DOWN    &kp RIGHT      &kp TAB    &none
    &none &kp WC_SCRS &kp MAC_SCRS &kp MAC_SCRR &none        &kp TAB          &none            &kp LA(LEFT)  &kp SPACE   &kp LA(RIGHT)  &kp ENTER  &none
                                   &kp LEFT     &trans       &kp RIGHT        &kp DEL          &kp BSPC      &kp ESC
                         >;
                 };
                 number_layer {
                         bindings = <
-   &none &out OUT_BLE &reset        &none        &none        &kp CARET        &kp MINUS       &kp N7     &kp N8     &kp N9     &kp EQUAL  &none
+   &none &out OUT_TOG &reset        &none        &none        &kp CARET        &kp MINUS       &kp N7     &kp N8     &kp N9     &kp EQUAL  &none
    &none &bt BT_CLR   &none        &none        &kp ASTRK    &kp FSLH         &kp N0          &kp N4     &kp N5     &kp N6     &trans     &none
    &none &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4     &kp PLUS        &kp N1     &kp N2     &kp N3     &kp COLON  &none
                                    &kp TAB      &kp SPACE    &kp ENTER        &kp MINUS       &kp DOT    &kp EQUAL
