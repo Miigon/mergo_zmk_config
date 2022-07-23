@@ -1,14 +1,12 @@
 file_format: "1"
-id: samoklava
-name: Samoklava
+id: mergoboard
+name: Mergoboard
 type: shield
-url: https://github.com/soundmonster/samoklava/
+url: https://github.com/Miigon/Mergoboard
 requires: [pro_micro]
-exposes: [i2c_oled]
+exposes: []
 features:
   - keys
-  - display
-  - underglow
 siblings:
   - corne_left
   - corne_right
