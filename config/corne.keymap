@@ -69,9 +69,9 @@
                 };
                 symbol_layer {
                         bindings = <
-   &none &kp GT   &kp RBRC    &kp RBKT      &kp RPAR    &kp BSLH        &kp MINUS   &kp CARET      &kp TILDE    &none    &kp AT     &none
+   &none &kp HASH &kp DLLR    &kp QMARK     &kp EXCL    &kp BSLH        &kp MINUS   &kp CARET      &kp TILDE    &none    &kp AT     &none
    &none &kp LT   &kp LBRC    &kp LBKT      &kp LPAR    &kp FSLH        &kp PRCNT   &kp ASTRK      &kp COLON    &none    &kp SEMI   &none
-   &none &kp HASH &kp DLLR    &kp QMARK     &kp EXCL    &kp PIPE        &kp PLUS    &kp EQUAL      &kp AMPS     &trans   &kp GRAVE  &none
+   &none &kp GT   &kp RBRC    &kp RBKT      &kp RPAR    &kp PIPE        &kp PLUS    &kp EQUAL      &kp AMPS     &trans   &kp GRAVE  &none
                               &kp UNDER     &kp DQT     &kp SQT         &kp DOT     &kp COMMA      &kp MINUS
                         >;
                 };
