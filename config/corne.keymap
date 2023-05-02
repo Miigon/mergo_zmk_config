@@ -72,15 +72,15 @@
                 base_layer {
                         bindings = <
    &none &kp Q      &kp W      &kp E       &kp R        &kp T         &kp Y         &kp U        &kp I        &kp O      &kp P         &none
-   &none &kp A      &kp S      &kp D       &kp F        &kp G         &kp H         &kp J        &kp K        &lt SYM L  &lt NUM SEMI  &none
-   &none &kp LCTRL  &kp Z      &kp X       &kp C        &kp V         &kp B         &kp N        &kp M        &mo SYM    &kp MAC_LANG  &none
-                              &mt LCMD TAB &lt NAV SPACE &kp ENTER   &td_cpswd  &kp BSPC &kp ESC
+   &none &kp A      &kp S      &kp D       &kp F        &kp G         &kp H         &kp J        &kp K        &kp L      &lt NUM SEMI  &none
+   &none &kp LCTRL  &kp Z      &kp X       &kp C        &kp V         &kp B         &kp N        &kp M        &none      &kp MAC_LANG  &none
+                              &mt LCMD TAB &lt NAV SPACE &kp ENTER   &td_cpswd  &kp BSPC &lt SYM ESC
                         >;
                 };
                 symbol_layer {
                         bindings = <
-   &none &kp HASH &kp DLLR    &kp QMARK     &kp EXCL    &kp BSLH        &kp MINUS   &kp CARET      &kp TILDE    &none    &kp AT     &none
-   &none &kp LT   &kp LBRC    &kp LBKT      &kp LPAR    &kp FSLH        &kp PRCNT   &kp ASTRK      &kp COLON    &none    &kp SEMI   &none
+   &none &kp HASH &kp DLLR    &kp QMARK     &kp EXCL    &kp BSLH        &kp MINUS   &kp CARET      &kp TILDE    &kp DOT    &kp AT     &none
+   &none &kp LT   &kp LBRC    &kp LBKT      &kp LPAR    &kp FSLH        &kp PRCNT   &kp ASTRK      &kp COLON    &kp COMMA    &kp SEMI   &none
    &none &kp GT   &kp RBRC    &kp RBKT      &kp RPAR    &kp PIPE        &kp PLUS    &kp EQUAL      &kp AMPS     &trans   &kp GRAVE  &none
                               &kp UNDER     &kp DQT     &kp SQT         &kp DOT     &kp COMMA      &kp MINUS
                         >;
