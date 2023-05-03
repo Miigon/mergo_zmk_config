@@ -14,10 +14,12 @@
 #define L_SYMBOL   1
 #define L_NAVI   2
 #define L_NUMBER  3
+#define L_EXTRA 4
 #define BSE L_BASE
 #define SYM L_SYMBOL
 #define NAV L_NAVI
 #define NUM L_NUMBER
+#define EXT L_EXTRA
 
 #define MAC_LANG RC(SPACE)
 #define MAC_SCRS LS(LG(N4)) // macOS screenshot
@@ -73,14 +75,14 @@
                         bindings = <
    &none &kp Q      &kp W      &kp E       &kp R        &kp T         &kp Y         &kp U        &kp I        &kp O      &kp P         &none
    &none &kp A      &kp S      &kp D       &kp F        &kp G         &kp H         &kp J        &kp K        &kp L      &lt NUM SEMI  &none
-   &none &kp LCTRL  &kp Z      &kp X       &kp C        &kp V         &kp B         &kp N        &kp M        &none      &kp MAC_LANG  &none
+   &none &kp LCTRL  &kp Z      &kp X       &kp C        &kp V         &kp B         &kp N        &kp M        &mo SYM    &kp MAC_LANG  &none
                               &mt LCMD TAB &lt NAV SPACE &kp ENTER   &td_cpswd  &kp BSPC &lt SYM ESC
                         >;
                 };
                 symbol_layer {
                         bindings = <
-   &none &kp HASH &kp DLLR    &kp QMARK     &kp EXCL    &kp BSLH        &kp MINUS   &kp CARET      &kp TILDE    &kp DOT    &kp AT     &none
-   &none &kp LT   &kp LBRC    &kp LBKT      &kp LPAR    &kp FSLH        &kp PRCNT   &kp ASTRK      &kp COLON    &kp COMMA    &kp SEMI   &none
+   &none &kp HASH &kp DLLR    &kp QMARK     &kp EXCL    &kp BSLH        &kp PRCNT   &kp CARET      &kp TILDE    &kp DOT    &kp AT     &none
+   &none &kp LT   &kp LBRC    &kp LBKT      &kp LPAR    &kp FSLH        &kp MINUS   &kp ASTRK      &kp COLON    &kp COMMA    &kp SEMI   &none
    &none &kp GT   &kp RBRC    &kp RBKT      &kp RPAR    &kp PIPE        &kp PLUS    &kp EQUAL      &kp AMPS     &trans   &kp GRAVE  &none
                               &kp UNDER     &kp DQT     &kp SQT         &kp DOT     &kp COMMA      &kp MINUS
                         >;
@@ -99,6 +101,14 @@
    &none &none        &none        &none        &kp ASTRK    &kp FSLH         &kp N0          &kp N4     &kp N5     &kp N6     &trans     &none
    &none &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4     &kp PLUS        &kp N1     &kp N2     &kp N3     &none      &none
                                    &kp TAB      &kp SPACE    &kp ENTER        &kp DOT       &kp BSPC    &kp COMMA
+                        >;
+                };
+                extra_layer {
+                        bindings = <
+   &none &none        &none        &none        &none        &none            &none           &none       &none     &none     &none     &none
+   &none &none        &none        &none        &none        &none            &none           &none       &none     &none     &none     &none
+   &none &none        &none        &none        &none        &none            &none           &none       &none     &trans     &none     &none
+                                   &none        &none        &none            &none           &none       &none
                         >;
                 };
         };
