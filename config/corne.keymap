@@ -81,10 +81,10 @@
                 };
                 symbol_layer {
                         bindings = <
-   &none &kp HASH &kp DLLR    &kp QMARK     &kp EXCL    &kp BSLH        &kp PRCNT   &kp CARET      &kp TILDE    &kp DOT    &kp AT     &none
-   &none &kp LT   &kp LBRC    &kp LBKT      &kp LPAR    &kp FSLH        &kp MINUS   &kp ASTRK      &kp COLON    &kp COMMA    &kp SEMI   &none
+   &none &kp HASH &kp DLLR    &kp QMARK     &kp EXCL    &kp BSLH        &kp PRCNT   &kp COMMA      &kp TILDE    &kp CARET    &kp AT     &none
+   &none &kp LT   &kp LBRC    &kp LBKT      &kp LPAR    &kp FSLH        &kp MINUS   &kp DOT        &kp COLON    &kp ASTRK    &kp SEMI   &none
    &none &kp GT   &kp RBRC    &kp RBKT      &kp RPAR    &kp PIPE        &kp PLUS    &kp EQUAL      &kp AMPS     &trans   &kp GRAVE  &none
-                              &kp UNDER     &kp DQT     &kp SQT         &kp DOT     &kp COMMA      &kp MINUS
+                              &kp UNDER     &kp DQT     &kp SQT         &none       &trans         &none
                         >;
                 };
                 navigation_layer {
