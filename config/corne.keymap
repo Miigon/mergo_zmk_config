@@ -40,7 +40,10 @@
 
 / {
         macros {
-            ZMK_MACRO(supermod, 
+            supermod: supermod { 
+                compatible = "zmk,behavior-macro";
+                label = "ZM_supermod";
+                #binding-cells = <0>;
                 bindings
                     = <&macro_press &mo LCTRL>
                     , <&macro_press &mo LALT>
@@ -50,7 +53,7 @@
                     , <&macro_release &mo LALT>
                     , <&macro_release &mo LGUI>
                     ;
-            );
+            }
         };
         combos {
            compatible = "zmk,combos";
