@@ -50,8 +50,7 @@
                     , <&macro_release &mo LALT>
                     , <&macro_release &mo LGUI>
                     ;
-                });
-            }
+            );
         };
         combos {
            compatible = "zmk,combos";
