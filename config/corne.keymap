@@ -40,15 +40,18 @@
 
 / {
         macros {
-            supermod: supermod {
-            label = "ZM_supermod";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&mo LCTRL>
-                , <&mo LALT>
-                ;
-            };
+            ZMK_MACRO(supermod, 
+                bindings
+                    = <&macro_press &mo LCTRL>
+                    , <&macro_press &mo LALT>
+                    , <&macro_press &mo LGUI>
+                    , <&macro_pause_for_release>
+                    , <&macro_release &mo LCTRL>
+                    , <&macro_release &mo LALT>
+                    , <&macro_release &mo LGUI>
+                    ;
+                });
+            }
         };
         combos {
            compatible = "zmk,combos";
