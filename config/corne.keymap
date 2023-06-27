@@ -70,6 +70,19 @@
             compatible = "zmk,conditional-layers";
         };
 
+        macros {
+                spc_kp: spc_kp {
+                label = "ZM_spc_kp";
+                compatible = "zmk,behavior-macro-one-param";
+                #binding-cells = <0>;
+                bindings
+                        = <&macro_tap &kp SPACE>
+                        , <&macro_param_1to1>
+                        , <&macro_tap &kp MACRO_PLACEHOLDER>
+                        ;
+                };
+        };
+
         keymap {
                 compatible = "zmk,keymap";
 
@@ -91,9 +104,9 @@
                 };
                 navigation_layer {
                         bindings = <
-   &none &kp C_MUTE  &kp AT       &kp HASH     &kp DLLR     &kp C_VOL_UP     &kp C_BRI_UP     &kp PG_UP     &kp UP      &kp PG_DN      &none      &none
+   &none &kp C_MUTE  &spc_kp W    &spc_kp E    &spc_kp R    &kp C_VOL_UP     &kp C_BRI_UP     &kp PG_UP     &kp UP      &kp PG_DN      &none      &none
    &none &sk LCTRL   &sk LALT     &sk LSHFT    &sk LCMD     &kp C_VOL_DN     &kp C_BRI_DN     &kp LEFT      &kp DOWN    &kp RIGHT      &kp TAB    &none
-   &none &kp WC_SCRS &kp MAC_SCRS &kp MAC_SCRR &none        &kp TAB          &none            &kp LA(LEFT)  &kp SPACE   &kp LA(RIGHT)  &sk SUPMOD  &none
+   &none &kp WC_SCRS &kp MAC_SCRS &kp MAC_SCRR &none        &kp TAB          &spc_kp B        &kp LA(LEFT)  &kp SPACE   &kp LA(RIGHT)  &sk SUPMOD  &none
                                   &kp LEFT     &trans       &kp RIGHT        &kp DEL          &kp BSPC      &kp ESC
                         >;
                 };
