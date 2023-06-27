@@ -74,7 +74,6 @@
                 spc_kp: spc_kp {
                 label = "ZM_spc_kp";
                 compatible = "zmk,behavior-macro-one-param";
-                #binding-cells = <0>;
                 bindings
                         = <&macro_tap &kp SPACE>
                         , <&macro_param_1to1>
