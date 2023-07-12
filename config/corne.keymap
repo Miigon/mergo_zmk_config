@@ -26,7 +26,7 @@
 #define MAC_SCRR LS(LG(N5)) // macOS screenrecord
 #define WC_SCRS LC(LG(A)) // wechat screenshot
 
-#define SUPMOD LC(LA(LGUI)) // super modifier
+#define SUPMOD CAPS // super modifier
 
 &mt {
     flavor = "hold-preferred";
