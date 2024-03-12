@@ -32,6 +32,7 @@
 #define WRPD LA(LG(X)) // warpd
 #define WRPH LA(LG(H)) // warpd history
 #define WRPN LA(LG(C)) // warpd normal
+#define WRPS LA(LG(S)) // warpd screen
 #define HMRW LS(LG(SPACE)) // homerow
 #define HMRS LS(LG(J)) // homerow scroll
 
@@ -128,7 +129,7 @@
                 extra_layer {
                         bindings = <
    &none &none        &none        &none        &none        &none            &none           &none       &none     &none     &none     &none
-   &none &none        &none        &none        &kp HMRW     &none            &kp WRPH        &kp HMRS    &none     &none     &none     &none
+   &none &none        &kp WRPS     &none        &kp HMRW     &none            &kp WRPH        &kp HMRS    &none     &none     &none     &none
    &none &none        &none        &none        &kp WRPN     &none            &none           &none       &none     &trans    &none     &none
                                    &none        &none        &none            &none           &kp HMRW    &none
                         >;
