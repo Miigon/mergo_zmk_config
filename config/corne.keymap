@@ -10,7 +10,6 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/modifiers.h>
-#include <dt-bindings/zmk/behavior_macros.h>
 
 #define L_BASE 0
 #define L_SYMBOL   1
@@ -92,19 +91,43 @@
                         ;
                 };
 
-                uml: uml { // mac_umlaut, for german
+                mac_umlaut: mac_umlaut { // mac_umlaut, for german
                 compatible = "zmk,behavior-macro-one-param";
                 #binding-cells = <1>;
                 wait-ms = <3>;
                 tap-ms = <3>;
                 bindings
-                        = <&macro_release &kp LSHFT &kp RSHFT>
                         , <&macro_tap &kp LA(U)>
-                        , <&macro_restore_modifiers>
                         , <&macro_param_1to1>
                         , <&macro_tap &kp MACRO_PLACEHOLDER>;
                 };
 
+        };
+
+        behaviors {
+                // Mod-morph for Ä
+                ae: ae {
+                compatible = "zmk,behavior-mod-morph";
+                #binding-cells = <0>;
+                bindings = <&mac_umlaut A>, <&mac_umlaut LS(A)>;
+                mods = <(MOD_LSFT|MOD_RSFT)>;
+                };
+
+                // Mod-morph for Ö
+                oe: oe {
+                compatible = "zmk,behavior-mod-morph";
+                #binding-cells = <0>;
+                bindings = <&mac_umlaut O>, <&mac_umlaut LS(O)>;
+                mods = <(MOD_LSFT|MOD_RSFT)>;
+                };
+
+                // Mod-morph for Ü
+                ue: ue {
+                compatible = "zmk,behavior-mod-morph";
+                #binding-cells = <0>;
+                bindings = <&mac_umlaut U>, <&mac_umlaut LS(U)>;
+                mods = <(MOD_LSFT|MOD_RSFT)>;
+                };
         };
 
         keymap {
@@ -136,8 +159,8 @@
                 };
                 number_layer {
                         bindings = <
-   &none &out OUT_TOG &uml O       &none        &uml U       &bt BT_CLR       &kp COMMA       &kp N7     &kp N8     &kp N9     &kp EQUAL  &none
-   &none &uml A       &kp LA(S)    &none        &kp ASTRK    &kp FSLH         &kp MINUS       &kp N4     &kp N5     &kp N6     &trans     &none
+   &none &out OUT_TOG &oe          &none        &ue          &bt BT_CLR       &kp COMMA       &kp N7     &kp N8     &kp N9     &kp EQUAL  &none
+   &none &ae          &kp LA(S)    &none        &kp ASTRK    &kp FSLH         &kp MINUS       &kp N4     &kp N5     &kp N6     &trans     &none
    &none &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4     &kp PLUS        &kp N1     &kp N2     &kp N3     &sk SUPMOD  &none
                                    &kp TAB      &kp SPACE    &kp ENTER        &kp DOT       &kp BSPC    &kp N0
                         >;
