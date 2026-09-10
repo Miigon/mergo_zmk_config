@@ -96,8 +96,8 @@
                 mac_ae: mac_ae {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
-                wait-ms = <15>;
-                tap-ms = <15>;
+                wait-ms = <5>;
+                tap-ms = <5>;
                 bindings
                         = <&macro_press &kp LALT>
                         , <&macro_tap &kp U>
@@ -109,8 +109,8 @@
                 mac_oe: mac_oe {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
-                wait-ms = <15>;
-                tap-ms = <15>;
+                wait-ms = <5>;
+                tap-ms = <5>;
                 bindings
                         = <&macro_press &kp LALT>
                         , <&macro_tap &kp U>
@@ -122,8 +122,8 @@
                 mac_ue: mac_ue {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
-                wait-ms = <15>;
-                tap-ms = <15>;
+                wait-ms = <5>;
+                tap-ms = <5>;
                 bindings
                         = <&macro_press &kp LALT>
                         , <&macro_tap &kp U>
