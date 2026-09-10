@@ -89,6 +89,62 @@
                         , <&macro_tap &kp MACRO_PLACEHOLDER>
                         ;
                 };
+
+                // ====== german macros begin
+ 
+                // ä -> Option + u, then a
+                mac_ae: mac_ae {
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                wait-ms = <15>;
+                tap-ms = <15>;
+                bindings
+                        = <&macro_press &kp LALT>
+                        , <&macro_tap &kp U>
+                        , <&macro_release &kp LALT>
+                        , <&macro_tap &kp A>;
+                };
+
+                // ö -> Option + u, then o
+                mac_oe: mac_oe {
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                wait-ms = <15>;
+                tap-ms = <15>;
+                bindings
+                        = <&macro_press &kp LALT>
+                        , <&macro_tap &kp U>
+                        , <&macro_release &kp LALT>
+                        , <&macro_tap &kp O>;
+                };
+
+                // ü -> Option + u, then u
+                mac_ue: mac_ue {
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                wait-ms = <15>;
+                tap-ms = <15>;
+                bindings
+                        = <&macro_press &kp LALT>
+                        , <&macro_tap &kp U>
+                        , <&macro_release &kp LALT>
+                        , <&macro_tap &kp U>;
+                };
+
+                // ß -> Option + s
+                mac_ss: mac_ss {
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                wait-ms = <15>;
+                tap-ms = <15>;
+                bindings
+                        = <&macro_press &kp LALT>
+                        , <&macro_tap &kp S>
+                        , <&macro_release &kp LALT>;
+                };
+
+                // ====== german macros end
+
         };
 
         keymap {
@@ -120,8 +176,8 @@
                 };
                 number_layer {
                         bindings = <
-   &none &out OUT_TOG &none        &bt BT_CLR   &none        &kp CARET        &kp COMMA       &kp N7     &kp N8     &kp N9     &kp EQUAL  &none
-   &none &none        &none        &none        &kp ASTRK    &kp FSLH         &kp MINUS       &kp N4     &kp N5     &kp N6     &trans     &none
+   &none &out OUT_TOG &none        &mac_ue      &none        &bt BT_CLR       &kp COMMA       &kp N7     &kp N8     &kp N9     &kp EQUAL  &none
+   &none &mac_ae      &mac_ss      &mac_oe      &kp ASTRK    &kp FSLH         &kp MINUS       &kp N4     &kp N5     &kp N6     &trans     &none
    &none &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4     &kp PLUS        &kp N1     &kp N2     &kp N3     &sk SUPMOD  &none
                                    &kp TAB      &kp SPACE    &kp ENTER        &kp DOT       &kp BSPC    &kp N0
                         >;
