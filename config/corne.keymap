@@ -90,22 +90,18 @@
                         ;
                 };
 
-                // ====== german macros begin
- 
-                macros {
-                        uml: uml { // mac_umlaut
-                        compatible = "zmk,behavior-macro-one-param";
-                        #binding-cells = <1>;
-                        wait-ms = <5>;
-                        tap-ms = <5>;
-                        bindings
-                                = <&macro_tap &kp LA(U)>
-                                , <&macro_param_1to1>
-                                , <&macro_tap &kp MACRO_PLACEHOLDER>;
-                        };
+                uml: uml { // mac_umlaut, for german
+                compatible = "zmk,behavior-macro-one-param";
+                #binding-cells = <1>;
+                wait-ms = <3>;
+                tap-ms = <3>;
+                bindings
+                        = <&macro_release &kp LSHFT &kp RSHFT>
+                        , <&macro_tap &kp LA(U)>
+                        , <&macro_restore_modifiers>
+                        , <&macro_param_1to1>
+                        , <&macro_tap &kp MACRO_PLACEHOLDER>;
                 };
-
-                // ====== german macros end
 
         };
 
