@@ -164,8 +164,8 @@
                 };
                 number_layer {
                         bindings = <
-   &none &out OUT_TOG &none        &mac_ue      &none        &bt BT_CLR       &kp COMMA       &kp N7     &kp N8     &kp N9     &kp EQUAL  &none
-   &none &mac_ae      &kp LA(S)    &mac_oe      &kp ASTRK    &kp FSLH         &kp MINUS       &kp N4     &kp N5     &kp N6     &trans     &none
+   &none &out OUT_TOG &mac_oe        &none        &mac_ue        &bt BT_CLR       &kp COMMA       &kp N7     &kp N8     &kp N9     &kp EQUAL  &none
+   &none &mac_ae      &kp LA(S)    &none      &kp ASTRK    &kp FSLH         &kp MINUS       &kp N4     &kp N5     &kp N6     &trans     &none
    &none &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4     &kp PLUS        &kp N1     &kp N2     &kp N3     &sk SUPMOD  &none
                                    &kp TAB      &kp SPACE    &kp ENTER        &kp DOT       &kp BSPC    &kp N0
                         >;
